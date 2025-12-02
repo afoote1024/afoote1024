@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saddleback Bakery - Case Study Generator</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-area">
+                <div class="logo-icon">🥖</div>
+                <h1 class="logo-text">Saddleback Bakery</h1>
+            </div>
+            <p class="tagline">Crafting Stories as Fresh as Our Bread</p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2 class="hero-title">Case Study Generator</h2>
+            <p class="hero-description">
+                Transform your interview summaries into professional, polished case studies.
+                Perfect for business analysis, customer research, and academic projects.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Input Section -->
+                <section class="input-section card">
+                    <h3 class="section-title">
+                        <span class="icon">📝</span>
+                        Create Your Case Study
+                    </h3>
+
+                    <form id="caseStudyForm" class="form">
+                        <div class="form-group">
+                            <label for="caseTitle" class="form-label">Case Study Title</label>
+                            <input
+                                type="text"
+                                id="caseTitle"
+                                class="form-input"
+                                placeholder="e.g., Saddleback Bakery Customer Experience Study"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="caseSummary" class="form-label">
+                                Interview Summary
+                                <span class="label-hint">(2-3 paragraphs recommended)</span>
+                            </label>
+                            <textarea
+                                id="caseSummary"
+                                class="form-textarea"
+                                rows="10"
+                                placeholder="Paste your interview summary here. Include key insights, observations, and findings from your research..."
+                                required
+                            ></textarea>
+                            <div class="character-count">
+                                <span id="charCount">0</span> characters
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-icon">✨</span>
+                            Generate Case Study
+                        </button>
+                    </form>
+                </section>
+
+                <!-- Preview Section -->
+                <section class="preview-section card">
+                    <div class="preview-header">
+                        <h3 class="section-title">
+                            <span class="icon">👁️</span>
+                            Preview
+                        </h3>
+                        <button id="downloadBtn" class="btn btn-secondary" disabled>
+                            <span class="btn-icon">📥</span>
+                            Download PDF
+                        </button>
+                    </div>
+
+                    <div id="previewArea" class="preview-content">
+                        <div class="empty-state">
+                            <div class="empty-icon">🥐</div>
+                            <p>Your case study will appear here</p>
+                            <p class="empty-hint">Fill in the form and click "Generate Case Study" to begin</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Saddleback Bakery. Baking knowledge into every case study.</p>
+            <div class="footer-decoration">
+                <span>🍞</span>
+                <span>🥖</span>
+                <span>🥐</span>
+                <span>🥯</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jsPDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+</body>
+</html>
